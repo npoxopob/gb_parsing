@@ -29,9 +29,16 @@ class MagnitParser:
 
     @staticmethod
     def __get_response(url, *args, **kwargs):
-        # todo обработать ошибки запросов и статусов тут
-        response = requests.get(url, *args, **kwargs)
-        return response
+        while True:
+            try:
+                response = requests.get(url, *args, **kwargs)
+                if response.status_code > 399:
+                    raise ParseError(response.status_code)
+                time.sleep(0.1)
+                return response
+            except (requests.RequestException, ParseError):
+                time.sleep(0.5)
+                continue
 
     def data_template(self, dates):
         return {
