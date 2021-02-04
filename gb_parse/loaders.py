@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 from scrapy import Selector
 from scrapy.loader import ItemLoader
 from itemloaders.processors import TakeFirst, MapCompose
-from .items import AutoyuolaItem, HHVacancyItem, HHCompanyItem
+from .items import AutoyuolaItem, HHVacancyItem
 
 
 def get_author_id(item):
@@ -21,8 +21,6 @@ def get_author_url(item):
 def clear_unicode(value):
     return value.replace("\u2009", "")
 
-def clear_ws(value):
-    return value.replace("\xa0", " ")
 
 def in_float(value):
     try:
@@ -65,12 +63,3 @@ class HHVacancyLoader(ItemLoader):
     description_out = TakeFirst()
     salary_in = "".join
     salary_out = TakeFirst()
-
-class HHCompanyLoader(ItemLoader):
-    default_item_class = HHCompanyItem
-    name_in = "".join
-    name_out = TakeFirst()
-    url_out = TakeFirst()
-    description_in = "".join
-    description_out = TakeFirst()
-    site_url_out = TakeFirst()

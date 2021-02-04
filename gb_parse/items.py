@@ -31,11 +31,3 @@ class HHVacancyItem(scrapy.Item):
     description = scrapy.Field()
     skills = scrapy.Field()
     company_url = scrapy.Field()
-
-
-class HHCompanyItem(scrapy.Item):
-    _id = scrapy.Field()
-    name = scrapy.Field()
-    url = scrapy.Field()
-    description = scrapy.Field()
-    site_url = scrapy.Field()
