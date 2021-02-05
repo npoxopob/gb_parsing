@@ -31,3 +31,23 @@ class HHVacancyItem(scrapy.Item):
     description = scrapy.Field()
     skills = scrapy.Field()
     company_url = scrapy.Field()
+
+class Insta(scrapy.Item):
+    _id = scrapy.Field()
+    date_parse = scrapy.Field()
+    data = scrapy.Field()
+    img = scrapy.Field()
+
+
+class InstaTag(Insta):
+    _id = scrapy.Field()
+    date_parse = scrapy.Field()
+    data = scrapy.Field()
+    img = scrapy.Field()
+
+
+class InstaPost(Insta):
+    _id = scrapy.Field()
+    date_parse = scrapy.Field()
+    data = scrapy.Field()
+    img = scrapy.Field()

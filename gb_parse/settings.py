@@ -18,7 +18,7 @@ LOG_LEVEL = "DEBUG"
 IMAGES_STORE = 'images'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:84.0) Gecko/20100101 Firefox/84.0"
+USER_AGENT = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -94,4 +94,4 @@ AUTOTHROTTLE_DEBUG = True
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-# ROTATING_PROXY_LIST_PATH = "/Users/gefest/projects/geekbrains/gb_parse_12_01_2021/proxis"
+# ROTATING_PROXY_LIST_PATH = "/home/alex/Documents/geekbrains/gb_parsing/proxis"
